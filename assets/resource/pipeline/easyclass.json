@@ -1,0 +1,56 @@
+{
+  "StartYiban": {
+    "next": [
+      "OpenApp"
+    ]
+  },
+  "OpenApp": {
+    "recognition": "TemplateMatch",
+    "template": "系统应用.png",
+    "action": "Click",
+    "next": [
+      "OpenBrowser"
+    ]
+  },
+  "OpenBrowser": {
+    "recognition": "TemplateMatch",
+    "template": "浏览器.png",
+    "action": "Click",
+    "post_wait_freezes": "10000",
+    "next": [
+      "BookMark"
+    ]
+  },
+  "BookMark": {
+    "recognition": "TemplateMatch",
+    "template": "书签.png",
+    "action": "Click",
+    "next": [
+      "OpenYiban"
+    ]
+  },
+  "OpenYiban": {
+    "recognition": "OCR",
+    "expected": "易班网",
+    "action": "Click",
+    "next": [
+      "OpenYoke"
+    ]
+  },
+  "OpenYoke": {
+    "recognition": "OCR",
+    "expected": "易班优课",
+    "action": "Click",
+    "next": [
+      "OpenKequn"
+    ]
+  },
+  "OpenKequn": {
+    "recognition": "OCR",
+    "expected": "课群",
+    "action": "Click",
+    "next": [
+      ""
+    ]
+  }
+}
